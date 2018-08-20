@@ -69,7 +69,7 @@ function parse_html {
       echo "Failed to parse file: $HTML_FILE"
       usage $0
     else 
-      CMD="sed -i '.bk' -e \"s:$search_text:$replace_text:g\" $HTML_FILE"
+      CMD="sed -i '' -e \"s:$search_text:$replace_text:g\" $HTML_FILE"
       eval $CMD
     fi
   done< <(find . -name *.html)
