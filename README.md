@@ -12,6 +12,31 @@ Windy API uses Leaflet version `0.7.7`.
 ## Getting started
 Obtain your [Windy API key here](https://api4.windy.com/api-key/) and check out our tutorials. You will handle our API in less than 20 minutes!
 
+## Activate index.html with your api key
+
+Assuming you have an API key stored as JSON like:
+
+```
+[{
+  "api_key": ""
+  ...
+}]
+```
+
+Run [activate_api.sh](./activate_api.sh) with your API key file:
+
+```
+./activate_api.sh -ai ~/path/to/credfile.json
+```
+
+## Sanitize your api key from index.html
+
+Assuming the above mentioned API key JSON file:
+
+```
+./activate_api.sh -si ~/path/to/credfile.json
+```
+
 ## Examples
  - [Hello World](https://api4.windy.com/examples/hello-world/)
  - [Change Windy parameters](https://api4.windy.com/examples/parameters/)
